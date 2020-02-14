@@ -10,7 +10,7 @@
 
         <title>酷企鵝包包</title>
     </head>
-    <body  bgcolor="black">
+    <body>
         
         <div class="bg-info container-fluid">   
               <!-- 上排選擇鈕 -->
@@ -22,6 +22,20 @@
             <div>
                 <h1 class="text-light text-center mt-5"><span class="title">酷企鵝包包訂購</span></h1>
             </div>
+              <!-- 左排選擇鈕 -->
+              <!-- 
+                <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-warning float-left" >1</button>
+                <button type="button" class="btn btn-secondary float-left">2</button>
+                <button type="button" class="btn btn-warning float-left">3</button>
+                <button type="button" class="btn btn-secondary float-left">4</button>
+                <button type="button" class="btn btn-warning float-left">5</button>
+                <button type="button" class="btn btn-secondary float-left">6</button>
+                <button type="button" class="btn btn-warning float-left">7</button>
+              </div> 
+            -->
+
+
             <form target="returnWin" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSddDdaOwk8Us0Lniu4WeZvoAn4D4dD2f7Yyj5mZywg-Ft-xeg/formResponse"  method="post" id="myForm" >
             
             <!-- 表單返回頁，記得在表單加「 target='returnWin' 」 -->
@@ -86,7 +100,7 @@
               <div class="form-group">
                 <div class="p-5">
                     <img src="img/3.JPG" class="img-fluid rounded"/>
-                    <label class="text-light text-center"><span class="titles">酷企鵝大臉托特包-2600元</span></label>
+                    <label class="text-light text-center"><span class="titles">酷企鵝大臉托特包-2500元</span></label>
                     <input type="number" class="form-control amount" name="entry.895281272" id="895281272" value="0" min=0 onchange="calTotal();">
                 </div>    
               </div>
@@ -110,7 +124,7 @@
               <div class="form-group">
                 <div class="p-5">
                     <img src="img/5.jpg" class="img-fluid rounded"/>
-                    <label class="text-light text-center"><span class="titles">酷企鵝郵差包-2100元</span></label>
+                    <label class="text-light text-center"><span class="titles">酷企鵝郵差包-1990元</span></label>
                     <input type="number" class="form-control amount" name="entry.212501064" id="212501064" value="0" min=0 onchange="calTotal();">
                 </div>
                 
@@ -121,7 +135,7 @@
               <div class="form-group">
                 <div class="p-5">
                     <img src="img/6.jpg" class="img-fluid rounded"/>
-                    <label class="text-light text-center"><span class="titles">酷企鵝帆布提包-1990</span></label>
+                    <label class="text-light text-center"><span class="titles">酷企鵝帆布提包-1990元</span></label>
                     <input type="number" class="form-control amount" name="entry.1032842072" id="1032842072" value="0" min=0 onchange="calTotal();">
                 </div>
                
@@ -176,7 +190,7 @@
                         <span class="sr-only">Next</span>
                       </a>
                     </div>
-                    <label class="text-light text-center"><span class="titles">酷企鵝連帽背包-2350元</span>
+                    <label class="text-light text-center"><span class="titles">酷企鵝連帽背包-2390元</span>
                     </label>
                     <input type="number" class="form-control amount" name="entry.37741287" id="37741287" value="0" min=0 onchange="calTotal();" >
                 </div>
@@ -198,17 +212,17 @@
 
         
         <!--FB帳號\匯款帳號後5碼\合計-->              
-        <div class="row">     
-            <div class="col-sm-2">
+        <div class="row ">     
+            <div class="col-sm-3">
                 <div class="form-group">
-                    <div class="m-300">
+                    <div>
                         <span class="text-danger">*</span><label >FB帳號</label>
                         <input type="text" class="form-control" name="entry.88957080" id="88957080" value="" onchange="calTotal();">
                     </div>
                 </div>    
             </div>             
 
-            <div class="col-sm-2">
+            <div class="col-sm-3">
                 <div class="form-group">
                   <span class="text-danger">*</span><label>匯款帳號後5碼</label>
                   <input type="text" class="form-control" name="entry.2098021060" id="2098021060" value="" onchange="calTotal();">
@@ -216,7 +230,7 @@
             </div>  
               
         
-            <div class="col-sm-2">
+            <div class="col-sm-3">
                 <div class="form-group">
                 <label>合計</label>
                 <input type="text" class="form-control" name="" id="total" value="" readonly />
@@ -224,11 +238,18 @@
             </div>
             
              <!--送出--> 
-            <div class="text-danger pb-60" style="float:right;">
-              <input type="hidden" name="op" value="reg"  />
-              <button type="submit" class="btn btn-warning ">送出</button>
-            </div>
-             
+             <div class="col-sm-3">
+            <div class="form-group">
+              <div class="text-danger pb-60">
+                  <input type="hidden" name="op" value="reg" />
+                  <button type="submit" class="btn btn-warning  btn-lg m-3 ">送出</button>
+              </div>
+
+
+            </div>  
+               
+              
+             </div>
         </div>
         
 
@@ -267,15 +288,15 @@
                     digits:true ,
                     min: 0
                 },
-                    'entry.895281272':{//3.酷企鵝大臉托特包-2600元
+                    'entry.895281272':{//3.酷企鵝大臉托特包-2500元
                     digits:true ,
                     min: 0
                 },
-                    'entry.1753921841':{//4.酷企鵝透明提包兩件組-2600元
+                    'entry.1753921841':{//4.酷企鵝透明提包兩件組-2100元
                     digits:true ,
                     min: 0
                 },
-                    'entry.212501064':{//5.酷企鵝郵差包-2100元
+                    'entry.212501064':{//5.酷企鵝郵差包-1990元
                     digits:true ,
                     min: 0
                 },
